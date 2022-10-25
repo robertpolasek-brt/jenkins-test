@@ -14,7 +14,7 @@ pipeline {
                     echo Running
                     env
                     echo "######################################"
-                    if [ FAIL_JOB = "true" ]; then
+                    if [ $FAIL_JOB = "true" ]; then
                         exit 30
                     else
                         echo "JOB completed"
