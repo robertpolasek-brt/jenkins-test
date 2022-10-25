@@ -12,7 +12,7 @@ pipeline {
                 script {
                   sh """
                     echo Running
-                    if [ FAIL_JOB = "true" ]; do
+                    if [ FAIL_JOB = "true" ]; then
                         exit 30
                     else
                         echo "JOB completed"
