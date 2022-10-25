@@ -10,7 +10,14 @@ pipeline {
         stage('Main') {
             steps {
                 script {
-                  sh "env && echo Running"
+                  sh """
+                    echo Running
+                    if [ FAIL_JOB = "true" ]; do
+                        exit 30
+                    else
+                        echo "JOB completed"
+                    fi
+                  """
                 }
             }
         }
